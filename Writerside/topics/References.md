@@ -167,3 +167,5 @@
 [82] Papineni, K., Roukos, S., Ward, T., & Zhu, W. J. (2002, July). Bleu: a method for automatic evaluation of machine translation. In Proceedings of the 40th annual meeting of the Association for Computational Linguistics (pp. 311-318).
 
 [83] Lin, C. Y. (2004, July). Rouge: A package for automatic evaluation of summaries. In Text summarization branches out (pp. 74-81).
+
+[84] Sun, L., Zhao, J., & Jin, Q. (2024). Revealing Personality Traits: A New Benchmark Dataset for Explainable Personality Recognition on Dialogues. arXiv preprint arXiv:2409.19723.

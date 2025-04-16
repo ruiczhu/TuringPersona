@@ -24,24 +24,24 @@
 
 基于这一分类框架，我们对现有主要对话数据集进行了系统梳理：
 
-| DataSet            | Type | PersenalityTag     | TuringScenario | Dialogues | Source           | Language        | Availability | Link                                                                              |
-|--------------------|------|--------------------|----------------|-----------|------------------|-----------------|--------------|-----------------------------------------------------------------------------------|
-| Persena-chat       | HHD  | None               | No             | 10,907    | Real             | English         | Yes          | [Link](https://github.com/facebookresearch/ParlAI/tree/main/projects/personachat) |
-| MultiWOZ           | HHD  | None               | Yes            | 113,556   | Real             | English         | Yes          | [Link](https://github.com/budzianowski/multiwoz)                                  |
-| DailyDialog        | HHD  | None(emotions)     | No             | 13,118    | Real(socalmedia) | English         | Yes          | [Link](https://hf-mirror.com/datasets/ConvLab/dailydialog)                        |
-| CPED               | HHD  | Big Five           | No             | 12,000    | Real(tvshows)    | Chinese         | Yes          | [Link](https://github.com/scutcyr/CPED)                                           |
-| PSYDIAL            | HHD  | Big Five           | No             | 2,932     | LLM-generation   | Korean          | Yes          | [Link](https://github.com/jiSilverH/psydial)                                      |
-| PersonalityEvd     | HHD  | Big Five           | No             | 1,924     | Real+LLMtagging  | Chinese         | Yes          | [Link](https://github.com/Lei-Sun-RUC/PersonalityEvd)                             |
-| FriendsPersona     | HHD  | Big Five           | No             | 711       | Real(tvshows)    | English         | Yes          | [Link](https://github.com/emorynlp/personality-detection)                         |
-| CharacterLLM       | HCD  | None               | No             | 118,800   | LLM-generation   | Chinese         | Yes          | [Link](https://huggingface.co/datasets/fnlp/character-llm-data)                   |
-| LLM-Roleplaying    | HCD  | None(role-based)   | No             | N/A       | LLM-generation   | English&Chinese | N/A          | [Link](https://github.com/Neph0s/awesome-llm-role-playing-with-persona)           |
-| HundredCV-Chat     | HCD  | None(topic_based)  | No             | 24,750    | LLM-generation   | Chinese         | Yes          | [Link](https://huggingface.co/datasets/Jax-dan/HundredCV-Chat)                    |
-| SGD                | HCD  | None(intent_based) | Yes            | 16,142    | Real             | English         | Yes          | [Link](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue)  |
-| PersenalLLM        | HCD  | Big Five           | No             | N/A       | LLM-generation   | English         | No           | [Link](https://github.com/hjian42/PersonaLLM)                                     |
-| LMSYS-CHAT-1M      | HCD  | None               | No             | 1,000,000 | Real             | Multiple        | Yes          | [Link](https://huggingface.co/datasets/lmsys/lmsys-chat-1m)                       |
-| LUCID              | HCD  | None               | No             | 4,276     | LLM-generation   | English         | Yes          | [Link](https://github.com/apple/ml-lucid-datagen)                                 |
-| Wizard of Internet | HCD  | None               | Yes            | 96,712    | Real             | English         | Yes          | [Link](https://parl.ai/projects/sea/)                                             |
-| TuringPersona      | HCD  | Big Five           | Yes            | --        | Real+LLMtagging  | English         | WIP          | [Link](https://github.com/zhuruiproject/TuringPersona)                            |
+| DataSet            | Type | PersenalityTag     | TuringScenario | Dialogues | Source           | Language        | Availability | References                                                                                   |
+|--------------------|------|--------------------|----------------|-----------|------------------|-----------------|--------------|----------------------------------------------------------------------------------------------|
+| Persena-chat       | HHD  | None               | No             | 10,907    | Real             | English         | Yes          | [Link](https://github.com/facebookresearch/ParlAI/tree/main/projects/personachat)            |
+| MultiWOZ           | HHD  | None               | Yes            | 113,556   | Real             | English         | Yes          | [Link](https://github.com/budzianowski/multiwoz)                                             |
+| DailyDialog        | HHD  | None(emotions)     | No             | 13,118    | Real(socalmedia) | English         | Yes          | [Link](https://hf-mirror.com/datasets/ConvLab/dailydialog)                                   |
+| CPED               | HHD  | Big Five           | No             | 12,000    | Real(tvshows)    | Chinese         | Yes          | [Link](https://github.com/scutcyr/CPED)                                                      |
+| PSYDIAL            | HHD  | Big Five           | No             | 2,932     | LLM-generation   | Korean          | Yes          | [Link](https://github.com/jiSilverH/psydial)                                                 |
+| PersonalityEvd     | HHD  | Big Five           | No             | 1,924     | Real+LLMtagging  | Chinese         | Yes          | [Link](https://github.com/Lei-Sun-RUC/PersonalityEvd)                                        |
+| FriendsPersona     | HHD  | Big Five           | No             | 711       | Real(tvshows)    | English         | Yes          | [Link](https://github.com/emorynlp/personality-detection)                                    |
+| CharacterLLM       | HCD  | None               | No             | 118,800   | LLM-generation   | Chinese         | Yes          | [Link](https://huggingface.co/datasets/fnlp/character-llm-data)                              |
+| LLM-Roleplaying    | HCD  | None(role-based)   | No             | N/A       | LLM-generation   | English&Chinese | N/A          | [Link](https://github.com/Neph0s/awesome-llm-role-playing-with-persona)                      |
+| HundredCV-Chat     | HCD  | None(topic_based)  | No             | 24,750    | LLM-generation   | Chinese         | Yes          | [Link](https://huggingface.co/datasets/Jax-dan/HundredCV-Chat)                               |
+| SGD                | HCD  | None(intent_based) | Yes            | 16,142    | Real             | English         | Yes          | [Link](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue)             |
+| PersenalLLM        | HCD  | Big Five           | No             | N/A       | LLM-generation   | English         | No           | [Link](https://github.com/hjian42/PersonaLLM)                                                |
+| LMSYS-CHAT-1M      | HCD  | None               | No             | 1,000,000 | Real             | Multiple        | Yes          | [Link](https://huggingface.co/datasets/lmsys/lmsys-chat-1m)                                  |
+| LUCID              | HCD  | None               | No             | 4,276     | LLM-generation   | English         | Yes          | [Link](https://github.com/apple/ml-lucid-datagen)                                            |
+| Wizard of Internet | HCD  | None               | Yes            | --        | Real             | English         | Yes          | [Link](https://github.com/facebookresearch/ParlAI/tree/main/parlai/tasks/wizard_of_internet) |
+| TuringPersona      | HCD  | Big Five           | Yes            | --        | Real+LLMtagging  | English         | Yes          | [Link](https://github.com/ruiczhu/TuringPersona)                                             |
 
 ### 图灵测试场景的界定
 
@@ -75,7 +75,7 @@
 现有的人格标注对话数据集主要可分为三类：基于真人交互的自然对话数据集、基于虚构内容（如电视剧、电影）的对话数据集，以及近期基于大语言模型生成的合成对话数据集。
 
 **1. 基于真人交互的自然对话数据集**
-这类数据集如PersonalityEvd[**81**]通过实际人类交互收集，并进行后期人格标注。它们的优势在于对话流程自然，但标注过程通常依赖自我报告或第三方评估，难以保证精确性。此外，如Mehta等人[**4**]指出，这类数据集规模通常有限，难以支持大规模深度学习模型训练。
+这类数据集如PersonalityEvd[**84**]通过实际人类交互收集，并进行后期人格标注。它们的优势在于对话流程自然，但标注过程通常依赖自我报告或第三方评估，难以保证精确性。此外，如Mehta等人[**4**]指出，这类数据集规模通常有限，难以支持大规模深度学习模型训练。
 
 **2. 基于虚构内容的对话数据集**
 Jiang等人[**18**]的Friends Persona和Chen等人[**19**]的CPED等基于电视剧的数据集虽然包含丰富的人格特征表达，但如Vinciarelli和Mohammadi[**20**]的研究所指出，这类数据的对话风格往往过于戏剧化和夸张，不适合真实人机交互场景的模型训练。
