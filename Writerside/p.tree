@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="p"
+                 name="PALLMDataset" start-page="Introduction.md">
+
+
+        <toc-element topic="Transforming-Human-Computer-Dialogues-with-Personality-Annotation.md"/>
+        <toc-element topic="Introduction.md"/>
+        <toc-element topic="Related-work.md"/>
+        <toc-element topic="Methodology.md"/>
+        <toc-element topic="Implementation.md"/>
+        <toc-element topic="Results.md"/>
+        <toc-element topic="References.md"/>
+        <toc-element topic="Our-Team.md"/>
+        <toc-element topic="CDS536-Project-Topics-AY2024-25.md"/>
+
+</instance-profile>
