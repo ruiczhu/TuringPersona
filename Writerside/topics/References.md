@@ -1,4 +1,4 @@
-# Reference
+# References
 
 [1] Miotto, M., Rossberg, N., & Kleinberg, B. (2022). Who is GPT-3? An exploration of personality, values and demographics. arXiv preprint arXiv:2209.14338.
 
