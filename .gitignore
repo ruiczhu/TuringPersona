@@ -1,4 +1,10 @@
 .DS_Store
 __pycache__/
+<<<<<<< HEAD
 /config
 /Model
+=======
+/config/
+main.tex
+/MPEAF/dataset/original_data
+>>>>>>> 59f605eb06040b897f65090d692b791cda7b2bb3
