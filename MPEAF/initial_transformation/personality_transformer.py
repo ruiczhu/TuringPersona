@@ -2,12 +2,12 @@ import requests
 import json
 import time
 import random
-import re
 
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from framework.personality_framework import PersonalityFramework
+from MPEAF.framework.personality_framework import PersonalityFramework
+
 
 class PersonalityTransformer:
     def __init__(self, api_key):

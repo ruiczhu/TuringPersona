@@ -7,13 +7,11 @@ import os
 import time
 import random
 import argparse
-import json
 import csv
 from iterative_optimizer import IterativeOptimizer
 
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from framework.personality_framework import PersonalityFramework
 from config.config import API_KEY
 
 def load_transformed_data(file_path):

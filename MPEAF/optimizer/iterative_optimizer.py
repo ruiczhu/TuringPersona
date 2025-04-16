@@ -13,7 +13,7 @@ import random
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from framework.personality_framework import PersonalityFramework
+from ..framework.personality_framework import PersonalityFramework
 
 class IterativeOptimizer:
     def __init__(self, api_key, personality_framework=None):
