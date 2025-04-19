@@ -147,7 +147,6 @@ class NaturalnessEvaluator:
 
 
 # if __name__ == "__main__":
-#     print(f"Current working directory: {os.getcwd()}")
 #     evaluator = NaturalnessEvaluator()
 #     evaluator.load_specific_data()
 #     naturalness_results = evaluator.evaluate_naturalness()

@@ -4,8 +4,8 @@ from MPEAF.evaluator.semantic_evaluator import DialogueSimilarityEvaluator
 import pandas as pd
 import os
 import nltk
-
-# 确保 NLTK 资源已下载
+import warnings
+warnings.filterwarnings("ignore")
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
@@ -36,15 +36,15 @@ class ComprehensiveEvaluator:
         # Run evaluations
         print("Running Personality Evaluator...")
         personality_results = self.p_eval.evaluate_and_compare()
-        output_file = "../results/personality_results.csv"
+        output_file = "../dataset/results/personality_results.csv"
         personality_results.to_csv(output_file, index=False)
         print("Running Dialogue Similarity Evaluator...")
         similarity_results = self.s_eval.analyze_dialogue_similarity()
-        output_file = "../results/similarity_results.csv"
+        output_file = "../dataset/results/similarity_results.csv"
         similarity_results.to_csv(output_file, index=False)
         print("Running Naturalness Evaluator...")
         naturalness_results = self.n_eval.evaluate_naturalness()
-        output_file = "../results/naturalness_results.csv"
+        output_file = "../dataset/results/naturalness_results.csv"
         naturalness_results.to_csv(output_file, index=False)
 
         return {
