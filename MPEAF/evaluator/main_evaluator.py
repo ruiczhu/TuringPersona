@@ -5,6 +5,7 @@ import pandas as pd
 import os
 import nltk
 import warnings
+
 warnings.filterwarnings("ignore")
 nltk.download('punkt')
 nltk.download('punkt_tab')
@@ -53,11 +54,42 @@ class ComprehensiveEvaluator:
             'naturalness_results': naturalness_results
         }
 
+    def print_comprehensive_results(self, filename="sgd_dialogues_train_1744818072.csv"):
+        # 打印以conversation_id和profile_id为主键的综合结果
+        # 仅包含指标列（不包括对话内容）
+        results = self.run_all_evaluators(filename)
+        if not results:
+            print("Failed to generate results.")
+            return None
 
-if __name__ == "__main__":
-    evaluator = ComprehensiveEvaluator()
-    results = evaluator.run_all_evaluators()
-    if results:
-        print(f"{results['personality_results'].shape}")
-        print(f"{results['similarity_results'].shape}")
-        print(f"{results['naturalness_results'].shape}")
+        # Extract results
+        personality_results = results['personality_results']
+        similarity_results = results['similarity_results']
+        naturalness_results = results['naturalness_results']
+
+        # Select only metric columns (exclude combined_content and combined_original_content)
+        select_p = personality_results[['conversation_id', 'profile_id',
+                                        'Extroversion_absolute_diff', 'Neuroticism_absolute_diff',
+                                        'Agreeableness_absolute_diff', 'Conscientiousness_absolute_diff',
+                                        'Openness_absolute_diff']]
+        select_s = similarity_results[['conversation_id', 'profile_id',
+                                       'tfidf_cosine_similarity', 'sbert_similarity',
+                                       'jaccard_similarity', 'edit_distance', 'bleu_score']]
+        select_n = naturalness_results[['conversation_id', 'profile_id',
+                                        'content_perplexity', 'original_content_perplexity',
+                                        'content_coherence', 'original_content_coherence',
+                                        'content_diversity', 'original_content_diversity',
+                                        'sentiment_shift']]
+        comprehensive_df = pd.merge(
+            pd.merge(select_p, select_s, on=['conversation_id', 'profile_id'], how='inner'),
+            select_n, on=['conversation_id', 'profile_id'], how='inner'
+        )
+        output_file = "../dataset/results/comprehensive_metrics.csv"
+        comprehensive_df.to_csv(output_file, index=False)
+        print(f"\nResults saved to {output_file}")
+        return comprehensive_df
+
+
+# if __name__ == "__main__":
+#     evaluator = ComprehensiveEvaluator()
+#     evaluator.print_comprehensive_results()
