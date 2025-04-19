@@ -218,7 +218,7 @@ def parse_arguments():
                         help='转换后数据CSV文件的路径')
     
     parser.add_argument('--output_dir', type=str,
-                        default="MPEAF/dataset/optimized_data",
+                        default="cccccc/dataset/optimized_data",
                         help='输出目录路径')
     
     parser.add_argument('--sample_size', type=int, default=3,
@@ -307,5 +307,5 @@ if __name__ == "__main__":
 
 # 使用示例:
 
-# python MPEAF/optimizer/optimize_transformed_data.py --input_path MPEAF/dataset/transformed_data/sgd_dialogues_train_1744712149.csv --output_dir MPEAF/dataset/optimized_data --sample_size 3 --strategy all --observations_path MPEAF/optimizer/feedback/observation_feedback.txt
+# python cccccc/optimizer/optimize_transformed_data.py --input_path cccccc/dataset/transformed_data/sgd_dialogues_train_1744712149.csv --output_dir cccccc/dataset/optimized_data --sample_size 3 --strategy all --observations_path cccccc/optimizer/feedback/observation_feedback.txt
 
